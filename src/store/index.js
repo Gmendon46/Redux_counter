@@ -29,6 +29,13 @@ const counterReducer = (state = {counter: 0, showCounter: true}, action) =>{
         }
     }
 
+    if(action.type === "reset"){
+        return{
+            counter : 0,
+            showCounter: state.showCounter
+        }
+    }
+
     return state
 }
 
